@@ -38,29 +38,31 @@ class ViewStatesSwitcher(context: Context, attrs: AttributeSet) : RelativeLayout
         errorRef = typedArray.getResourceId(R.styleable.view_states_switcher_attributes_errorView, -1);
         emptyRef = typedArray.getResourceId(R.styleable.view_states_switcher_attributes_emptyView, -1);
 
-        /*val title = resources.getText(typedArray
-            .getResourceId(R.styleable
-                .custom_component_attributes_custom_component_title,
-                R.string.component_one))
-
-        my_title.text = title
-        my_edit.hint =
-                "${resources.getString(R.string.hint_text)} $title"
-
         typedArray.recycle()
 
-        context.theme.obtainStyledAttributes(
-            attrs,
-            R.styleable.ViewStatesSwitcher,
-            0, 0).apply {
+        /*val title = resources.getText(typedArray
+                 .getResourceId(R.styleable
+                     .custom_component_attributes_custom_component_title,
+                     R.string.component_one))
 
-            try {
-                mainView = resources.(R.styleable.ViewStatesSwitcher_mainView, false)
-                mTextPos = resources.getR(R.styleable.ViewStatesSwitcher_mainView, 0)
-            } finally {
-                recycle()
-            }
-        }*/
+             my_title.text = title
+             my_edit.hint =
+                     "${resources.getString(R.string.hint_text)} $title"
+
+             typedArray.recycle()
+
+             context.theme.obtainStyledAttributes(
+                 attrs,
+                 R.styleable.ViewStatesSwitcher,
+                 0, 0).apply {
+
+                 try {
+                     normalView = resources.(R.styleable.ViewStatesSwitcher_mainView, false)
+                     mTextPos = resources.getR(R.styleable.ViewStatesSwitcher_mainView, 0)
+                 } finally {
+                     recycle()
+                 }
+             }*/
     }
 
     override fun onAttachedToWindow() {
