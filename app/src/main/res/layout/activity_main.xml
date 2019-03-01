@@ -8,7 +8,7 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-    <com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2
+    <com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher
             android:id="@+id/viewStatesSwitcher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +41,6 @@
             android:layout_height="wrap_content"
             android:text="Error"/>
 
-    </com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2>
+    </com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher>
 
 </LinearLayout>
