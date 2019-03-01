@@ -35,8 +35,6 @@ public class ViewStatesSwitcher extends LinearLayout {
     View errorView;
     View emptyView;
 
-
-
     public ViewStatesSwitcher(Context context, AttributeSet attrs) {
         super(context, attrs);
 
