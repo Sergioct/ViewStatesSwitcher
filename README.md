@@ -1,7 +1,7 @@
 # View States Switcher
 
 <a id="badgeA" class="nolink collapsed" href="#" data-toggle="collapse" data-target="#markdown">
-    <img id="badge" src="https://jitpack.io/v/com.gitlab.sergiocrespotoubes/viewstatesswitcher.svg">
+    <img id="badge" src="https://jitpack.io/v/Sergioct/ViewStatesSwitcher.svg">
 </a>
 
 ## About
