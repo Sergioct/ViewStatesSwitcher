@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-
 group='com.github.Sergioct'
 
 android {
@@ -8,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 3
-        versionName "0.1.2 ViewStatesSwitcher"
+        versionCode 4
+        versionName "0.1.5 ViewStatesSwitcher"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
