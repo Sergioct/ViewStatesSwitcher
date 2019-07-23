@@ -8,8 +8,8 @@ android {
         applicationId "com.sergiocrespotoubes.viewstatesswitcher"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 8
-        versionName "0.1.8"
+        versionCode 10
+        versionName "0.1.10"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
