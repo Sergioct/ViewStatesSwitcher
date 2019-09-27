@@ -24,7 +24,7 @@ android {
 
 publish {
     userOrg = 'sergioct'
-    repoName = 'ViewStatesSwitcher'
+    repoName = 'SergioCrespoToubes'
     groupId = 'com.sergiocrespotoubes.viewstatesswitcherlib'
     artifactId = 'ViewStatesSwitcher'
     publishVersion = '0.1.13'

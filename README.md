@@ -1,6 +1,7 @@
 # View States Switcher
 
-[![JCenter](https://img.shields.io/badge/%20JCenter%20-0.1.13-5bc0de.svg)](https://bintray.com/sergioct/ViewStatesSwitcher/ViewStatesSwitcher/_latestVersion)
+[![Download](https://api.bintray.com/packages/sergioct/SergioCrespoToubes/ViewStatesSwitcher/images/download.svg) ](https://bintray.com/sergioct/SergioCrespoToubes/ViewStatesSwitcher/_latestVersion)
+[![MinSdk](https://img.shields.io/badge/%20MinSdk%20-%2019%2B%20-f0ad4e.svg)](https://android-arsenal.com/api?level=19)
 
 ## About
 Library that control the different states of a view, NORMAL, LOADING, EMPTY, ERROR. Perfect for a simple recycler view control views.
