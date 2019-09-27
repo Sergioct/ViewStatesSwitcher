@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ViewStatesSwitcher</string>
+    <string name="loading">Loading…</string>
+    <string name="empty">Empty</string>
+    <string name="error">Error</string>
+    <string name="normal">Normal</string>
+    <string name="lorem">Lorem Ipsum</string>
 </resources>

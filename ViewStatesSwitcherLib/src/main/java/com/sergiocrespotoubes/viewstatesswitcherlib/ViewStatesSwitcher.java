@@ -61,7 +61,7 @@ public class ViewStatesSwitcher extends LinearLayout {
                 status = Status.ERROR;
                 break;
             case 4:
-                status = Status.ERROR;
+                status = Status.EMPTY;
                 break;
         }
 

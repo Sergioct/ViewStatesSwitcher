@@ -1,46 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:custom="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+        <Button
+                android:id="@+id/normalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/normal"/>
+
+        <Button
+                android:id="@+id/errorButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/error"/>
+
+        <Button
+                android:id="@+id/emptyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/empty"/>
+
+    </LinearLayout>
 
     <com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher
             android:id="@+id/viewStatesSwitcher"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            custom:state="idle"
-            custom:normalView="@+id/hello"
-            custom:emptyView="@+id/empty"
-            custom:errorView="@+id/error"
-            custom:loadingView="@+id/loading">
+            android:layout_height="match_parent"
+            custom:normalView="@+id/dataRecyclerView"
+            custom:emptyView="@+id/emptyView"
+            custom:errorView="@+id/errorView"
+            custom:loadingView="@+id/loadingView">
 
-        <TextView
-            android:id="@+id/hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello !"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dataRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_post"/>
 
-        <TextView
-            android:id="@+id/empty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Empty"/>
+        <include android:id="@+id/emptyView" layout="@layout/include_empty"/>
 
-        <TextView
-            android:id="@+id/loading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Loading"/>
+        <include android:id="@+id/loadingView" layout="@layout/include_loading"/>
 
-        <TextView
-            android:id="@+id/error"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Error"/>
+        <include android:id="@+id/errorView" layout="@layout/include_error"/>
 
     </com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher>
 
