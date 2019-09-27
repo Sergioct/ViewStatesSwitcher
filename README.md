@@ -4,7 +4,7 @@
 [![MinSdk](https://img.shields.io/badge/%20MinSdk%20-%2019%2B%20-f0ad4e.svg)](https://android-arsenal.com/api?level=19)
 
 ## About
-Library that control the different states of a view, NORMAL, LOADING, EMPTY, ERROR. Perfect for a simple recycler view control views.
+Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ERROR. Perfect for a simple recycler view control views.
 
 - IDLE state show all views at the same time.
 
@@ -22,12 +22,12 @@ dependencies {
 <declare-styleable name="view_states_switcher_attributes">
         <attr name="state" format="enum">
             <enum name="idle" value="0"/>
-            <enum name="normal" value="1"/>
+            <enum name="success" value="1"/>
             <enum name="loading" value="2"/>
             <enum name="error" value="3"/>
             <enum name="empty" value="4"/>
         </attr>
-        <attr name="normalView" format="reference" />
+        <attr name="successView" format="reference" />
         <attr name="loadingView" format="reference" />
         <attr name="errorView" format="reference" />
         <attr name="emptyView" format="reference" />
@@ -42,7 +42,7 @@ dependencies {
             android:id="@+id/viewStatesSwitcher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            custom:normalView="@+id/hello"
+            custom:successView="@+id/hello"
             custom:emptyView="@+id/empty"
             custom:errorView="@+id/error"
             custom:loadingView="@+id/loading">
@@ -55,7 +55,7 @@ dependencies {
 #### Code
 ```java
 ViewStatesSwitcher2 viewStatesSwitcher = (ViewStatesSwitcher2)findViewById(R.id.viewStatesSwitcher)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.NORMAL)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.SUCCESS)
 viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.LOADING)
 viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.EMPTY)
 viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.ERROR)

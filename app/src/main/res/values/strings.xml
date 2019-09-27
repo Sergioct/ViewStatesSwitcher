@@ -3,6 +3,6 @@
     <string name="loading">Loading…</string>
     <string name="empty">Empty</string>
     <string name="error">Error</string>
-    <string name="normal">Normal</string>
+    <string name="success">Success</string>
     <string name="lorem">Lorem Ipsum</string>
 </resources>
