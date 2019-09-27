@@ -40,7 +40,7 @@ dependencies {
 	
 #### XML
 ```xml
-<com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2
+<com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher
             android:id="@+id/viewStatesSwitcher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@ dependencies {
             
             ...
             
-</com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2>            
+</com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2>           
 ```
 	
 #### Code
