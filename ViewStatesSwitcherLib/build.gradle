@@ -1,29 +1,37 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.Sergioct'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 11
-        versionName "0.1.11 ViewStatesSwitcher"
-
+        versionCode 13
+        versionName "0.1.13 ViewStatesSwitcher"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
 
+publish {
+    userOrg = 'sergioct'
+    repoName = 'ViewStatesSwitcher'
+    groupId = 'com.sergiocrespotoubes.viewstatesswitcherlib'
+    artifactId = 'ViewStatesSwitcher'
+    publishVersion = '0.1.13'
+    desc = 'Library that control the different states of a view, NORMAL, LOADING, EMPTY, ERROR. Perfect for a simple recycler view control views. '
+    website = 'https://github.com/Sergioct/ViewStatesSwitcher'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.github.jitpack:gradle-simple:1.0'
 }
