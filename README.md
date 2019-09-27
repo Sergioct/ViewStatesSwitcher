@@ -1,8 +1,6 @@
 # View States Switcher
 
-<a id="badgeA" class="nolink collapsed" href="#" data-toggle="collapse" data-target="#markdown">
-    <img id="badge" src="https://jitpack.io/v/Sergioct/ViewStatesSwitcher.svg">
-</a>
+[![JCenter](https://img.shields.io/badge/%20JCenter%20-0.1.13-5bc0de.svg)](https://bintray.com/sergioct/ViewStatesSwitcher/ViewStatesSwitcher/_latestVersion)
 
 ## About
 Library that control the different states of a view, NORMAL, LOADING, EMPTY, ERROR. Perfect for a simple recycler view control views.
@@ -11,20 +9,10 @@ Library that control the different states of a view, NORMAL, LOADING, EMPTY, ERR
 
 ## Setup
 
-#### Add it in your root build.gradle at the end of repositories:
-```groovy
-allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
-}
-```
-
 #### Add the dependency
 ```groovy
 dependencies {
-    implementation 'com.gitlab.sergiocrespotoubes:viewstatesswitcher:0.1.0'
+    implementation 'com.sergiocrespotoubes.viewstatesswitcherlib:ViewStatesSwitcher:0.1.13'
 }
 ```
 
