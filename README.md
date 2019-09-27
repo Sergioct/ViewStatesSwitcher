@@ -8,7 +8,7 @@ Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ER
 
 - IDLE state show all views at the same time.
 
-![Alt Text](https://i.imgur.com/osgI6yI.gifv)
+![Alt Text](https://i.imgur.com/osgI6yI.gif)
 
 ## Setup
 
