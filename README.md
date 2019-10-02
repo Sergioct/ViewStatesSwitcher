@@ -51,7 +51,7 @@ dependencies {
             
             ...
             
-</com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2>           
+</com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher>           
 ```
 	
 #### Code
