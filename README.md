@@ -44,6 +44,8 @@ dependencies {
             android:id="@+id/viewStatesSwitcher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+	    custom:state="loading"
+            tools:state="idle"
             custom:successView="@+id/hello"
             custom:emptyView="@+id/empty"
             custom:errorView="@+id/error"
