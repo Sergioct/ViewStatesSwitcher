@@ -12,18 +12,18 @@ import android.widget.LinearLayout
  */
 class ViewStatesSwitcher2(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
 
-    internal var status = Status.IDLE
+    private var status = Status.IDLE
 
-    internal var ERROR_REF = -1
-    internal var successRef: Int = 0
-    internal var loadingRef: Int = 0
-    internal var errorRef: Int = 0
-    internal var emptyRef: Int = 0
+    private var ERROR_REF = -1
+    private var successRef: Int = 0
+    private var loadingRef: Int = 0
+    private var errorRef: Int = 0
+    private var emptyRef: Int = 0
 
-    internal var successView: View? = null
-    internal var loadingView: View? = null
-    internal var errorView: View? = null
-    internal var emptyView: View? = null
+    private var successView: View? = null
+    private var loadingView: View? = null
+    private var errorView: View? = null
+    private var emptyView: View? = null
 
     enum class Status {
         IDLE,
@@ -58,15 +58,16 @@ class ViewStatesSwitcher2(context: Context, attrs: AttributeSet) : LinearLayout(
             ERROR_REF
         )
 
-        when (stateInt) {
-            0 -> status = Status.IDLE
-            1 -> status = Status.SUCCESS
-            2 -> status = Status.LOADING
-            3 -> status = Status.ERROR
-            4 -> status = Status.EMPTY
+        status = when (stateInt) {
+            0 -> Status.IDLE
+            1 -> Status.SUCCESS
+            2 -> Status.LOADING
+            3 -> Status.ERROR
+            4 -> Status.EMPTY
+            else -> Status.IDLE
         }
 
-        this.orientation = LinearLayout.VERTICAL
+        this.orientation = VERTICAL
         typedArray.recycle()
     }
 
@@ -95,37 +96,57 @@ class ViewStatesSwitcher2(context: Context, attrs: AttributeSet) : LinearLayout(
         status = auxStatus
 
         when (status) {
-            ViewStatesSwitcher2.Status.IDLE -> {
-                if (successView != null) successView!!.visibility = View.VISIBLE
-                if (loadingView != null) loadingView!!.visibility = View.VISIBLE
-                if (errorView != null) errorView!!.visibility = View.VISIBLE
-                if (emptyView != null) emptyView!!.visibility = View.VISIBLE
+            Status.IDLE -> {
+                successView?.visibility = View.VISIBLE
+                loadingView?.visibility = View.VISIBLE
+                errorView?.visibility = View.VISIBLE
+                emptyView?.visibility = View.VISIBLE
             }
-            ViewStatesSwitcher2.Status.SUCCESS -> {
-                if (successView != null) successView!!.visibility = View.VISIBLE
-                if (loadingView != null) loadingView!!.visibility = View.GONE
-                if (errorView != null) errorView!!.visibility = View.GONE
-                if (emptyView != null) emptyView!!.visibility = View.GONE
+            Status.SUCCESS -> {
+                successView?.visibility = View.VISIBLE
+                loadingView?.visibility = View.GONE
+                errorView?.visibility = View.GONE
+                emptyView?.visibility = View.GONE
             }
-            ViewStatesSwitcher2.Status.LOADING -> {
-                if (successView != null) successView!!.visibility = View.GONE
-                if (loadingView != null) loadingView!!.visibility = View.VISIBLE
-                if (errorView != null) errorView!!.visibility = View.GONE
-                if (emptyView != null) emptyView!!.visibility = View.GONE
+            Status.LOADING -> {
+                successView?.visibility = View.GONE
+                loadingView?.visibility = View.VISIBLE
+                errorView?.visibility = View.GONE
+                emptyView?.visibility = View.GONE
             }
-            ViewStatesSwitcher2.Status.ERROR -> {
-                if (successView != null) successView!!.visibility = View.GONE
-                if (loadingView != null) loadingView!!.visibility = View.GONE
-                if (errorView != null) errorView!!.visibility = View.VISIBLE
-                if (emptyView != null) emptyView!!.visibility = View.GONE
+            Status.ERROR -> {
+                successView?.visibility = View.GONE
+                loadingView?.visibility = View.GONE
+                errorView?.visibility = View.VISIBLE
+                emptyView?.visibility = View.GONE
             }
-            ViewStatesSwitcher2.Status.EMPTY -> {
-                if (successView != null) successView!!.visibility = View.GONE
-                if (loadingView != null) loadingView!!.visibility = View.GONE
-                if (errorView != null) errorView!!.visibility = View.GONE
-                if (emptyView != null) emptyView!!.visibility = View.VISIBLE
+            Status.EMPTY -> {
+                successView?.visibility = View.GONE
+                loadingView?.visibility = View.GONE
+                errorView?.visibility = View.GONE
+                emptyView?.visibility = View.VISIBLE
             }
         }
     }
 
+}
+
+fun ViewStatesSwitcher2.success() {
+    this.setStatus(ViewStatesSwitcher2.Status.SUCCESS)
+}
+
+fun ViewStatesSwitcher2.error() {
+    this.setStatus(ViewStatesSwitcher2.Status.ERROR)
+}
+
+fun ViewStatesSwitcher2.empty() {
+    this.setStatus(ViewStatesSwitcher2.Status.EMPTY)
+}
+
+fun ViewStatesSwitcher2.idle() {
+    this.setStatus(ViewStatesSwitcher2.Status.IDLE)
+}
+
+fun ViewStatesSwitcher2.loading() {
+    this.setStatus(ViewStatesSwitcher2.Status.LOADING)
 }
