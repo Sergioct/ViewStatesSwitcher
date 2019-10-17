@@ -15,7 +15,7 @@ Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ER
 #### Add the dependency
 ```groovy
 dependencies {
-    implementation 'com.sergiocrespotoubes.viewstatesswitcherlib:ViewStatesSwitcher:0.1.13'
+    implementation 'com.sergiocrespotoubes.viewstatesswitcherlib:ViewStatesSwitcher:0.1.15'
 }
 ```
 
@@ -58,11 +58,11 @@ dependencies {
 	
 #### Code
 ```java
-ViewStatesSwitcher2 viewStatesSwitcher = (ViewStatesSwitcher2)findViewById(R.id.viewStatesSwitcher)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.SUCCESS)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.LOADING)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.EMPTY)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.ERROR)
+ViewStatesSwitcher viewStatesSwitcher = (ViewStatesSwitcher)findViewById(R.id.viewStatesSwitcher)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.SUCCESS)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.LOADING)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.EMPTY)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.ERROR)
 ```
 
 # License
