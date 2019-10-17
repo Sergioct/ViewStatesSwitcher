@@ -8,12 +8,14 @@ Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ER
 
 - IDLE state show all views at the same time.
 
+![Alt Text](https://i.imgur.com/osgI6yI.gif)
+
 ## Setup
 
 #### Add the dependency
 ```groovy
 dependencies {
-    implementation 'com.sergiocrespotoubes.viewstatesswitcherlib:ViewStatesSwitcher:0.1.13'
+    implementation 'com.sergiocrespotoubes.viewstatesswitcherlib:ViewStatesSwitcher:0.1.15'
 }
 ```
 
@@ -38,10 +40,12 @@ dependencies {
 	
 #### XML
 ```xml
-<com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2
+<com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher
             android:id="@+id/viewStatesSwitcher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+	    custom:state="loading"
+            tools:state="idle"
             custom:successView="@+id/hello"
             custom:emptyView="@+id/empty"
             custom:errorView="@+id/error"
@@ -49,16 +53,24 @@ dependencies {
             
             ...
             
-</com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2>            
+</com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher>           
 ```
 	
-#### Code
+#### Code Java
 ```java
-ViewStatesSwitcher2 viewStatesSwitcher = (ViewStatesSwitcher2)findViewById(R.id.viewStatesSwitcher)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.SUCCESS)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.LOADING)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.EMPTY)
-viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.ERROR)
+ViewStatesSwitcher viewStatesSwitcher = (ViewStatesSwitcher)findViewById(R.id.viewStatesSwitcher)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.SUCCESS)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.LOADING)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.EMPTY)
+viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.ERROR)
+```
+
+#### Code Kotlin Ext
+```java
+viewStatesSwitcher.success()
+viewStatesSwitcher.loading()
+viewStatesSwitcher.empty()
+viewStatesSwitcher.error()
 ```
 
 # License
