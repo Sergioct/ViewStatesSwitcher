@@ -56,13 +56,21 @@ dependencies {
 </com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher>           
 ```
 	
-#### Code
+#### Code Java
 ```java
 ViewStatesSwitcher viewStatesSwitcher = (ViewStatesSwitcher)findViewById(R.id.viewStatesSwitcher)
 viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.SUCCESS)
 viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.LOADING)
 viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.EMPTY)
 viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.ERROR)
+```
+
+#### Code Kotlin Ext
+```kotlin
+viewStatesSwitcher.success()
+viewStatesSwitcher.loading()
+viewStatesSwitcher.empty()
+viewStatesSwitcher.error()
 ```
 
 # License
