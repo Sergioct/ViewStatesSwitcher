@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jakewharton.rxbinding3.view.clicks
-import com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher
+import com.sergiocrespotoubes.viewstatesswitcherlib.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
@@ -35,15 +35,15 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     override fun showError() {
-        viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.ERROR)
+        viewStatesSwitcher.error()
     }
 
     override fun showLoading() {
-        viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.LOADING)
+        viewStatesSwitcher.loading()
     }
 
     override fun showEmpty() {
-        viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.EMPTY)
+        viewStatesSwitcher.empty()
     }
 
     override fun showData(users: List<User>) {
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
             UserItem(user)
         }
         groupAdapter.addAll(userItems)
-        viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.SUCCESS)
+        viewStatesSwitcher.success()
     }
 
 }
