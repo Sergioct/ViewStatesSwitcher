@@ -10,7 +10,15 @@ import android.widget.LinearLayout
  * SergioCrespoToubes@gmail.com
  * www.SergioCrespoToubes.com
  */
-class ViewStatesSwitcher2(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
+class ViewStatesSwitcher(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
+
+    enum class Status {
+        IDLE,
+        SUCCESS,
+        LOADING,
+        ERROR,
+        EMPTY
+    }
 
     private var status = Status.IDLE
 
@@ -24,14 +32,6 @@ class ViewStatesSwitcher2(context: Context, attrs: AttributeSet) : LinearLayout(
     private var loadingView: View? = null
     private var errorView: View? = null
     private var emptyView: View? = null
-
-    enum class Status {
-        IDLE,
-        SUCCESS,
-        LOADING,
-        ERROR,
-        EMPTY
-    }
 
     init {
 
@@ -131,22 +131,22 @@ class ViewStatesSwitcher2(context: Context, attrs: AttributeSet) : LinearLayout(
 
 }
 
-fun ViewStatesSwitcher2.success() {
-    this.setStatus(ViewStatesSwitcher2.Status.SUCCESS)
+fun ViewStatesSwitcher.success() {
+    this.setStatus(ViewStatesSwitcher.Status.SUCCESS)
 }
 
-fun ViewStatesSwitcher2.error() {
-    this.setStatus(ViewStatesSwitcher2.Status.ERROR)
+fun ViewStatesSwitcher.error() {
+    this.setStatus(ViewStatesSwitcher.Status.ERROR)
 }
 
-fun ViewStatesSwitcher2.empty() {
-    this.setStatus(ViewStatesSwitcher2.Status.EMPTY)
+fun ViewStatesSwitcher.empty() {
+    this.setStatus(ViewStatesSwitcher.Status.EMPTY)
 }
 
-fun ViewStatesSwitcher2.idle() {
-    this.setStatus(ViewStatesSwitcher2.Status.IDLE)
+fun ViewStatesSwitcher.idle() {
+    this.setStatus(ViewStatesSwitcher.Status.IDLE)
 }
 
-fun ViewStatesSwitcher2.loading() {
-    this.setStatus(ViewStatesSwitcher2.Status.LOADING)
+fun ViewStatesSwitcher.loading() {
+    this.setStatus(ViewStatesSwitcher.Status.LOADING)
 }
