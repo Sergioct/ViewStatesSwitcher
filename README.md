@@ -66,7 +66,7 @@ viewStatesSwitcher.setStatus(ViewStatesSwitcher.Status.ERROR)
 ```
 
 #### Code Kotlin Ext
-```kotlin
+```java
 viewStatesSwitcher.success()
 viewStatesSwitcher.loading()
 viewStatesSwitcher.empty()
