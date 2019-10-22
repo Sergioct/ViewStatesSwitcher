@@ -92,7 +92,27 @@ class ViewStatesSwitcher(context: Context, attrs: AttributeSet) : LinearLayout(c
         setStatus(status)
     }
 
-    fun setStatus(auxStatus: Status) {
+    fun success() {
+        this.setStatus(Status.SUCCESS)
+    }
+
+    fun error() {
+        this.setStatus(Status.ERROR)
+    }
+
+    fun empty() {
+        this.setStatus(Status.EMPTY)
+    }
+
+    fun idle() {
+        this.setStatus(Status.IDLE)
+    }
+
+    fun loading() {
+        this.setStatus(Status.LOADING)
+    }
+
+    private fun setStatus(auxStatus: Status) {
         status = auxStatus
 
         when (status) {
@@ -129,24 +149,4 @@ class ViewStatesSwitcher(context: Context, attrs: AttributeSet) : LinearLayout(c
         }
     }
 
-}
-
-fun ViewStatesSwitcher.success() {
-    this.setStatus(ViewStatesSwitcher.Status.SUCCESS)
-}
-
-fun ViewStatesSwitcher.error() {
-    this.setStatus(ViewStatesSwitcher.Status.ERROR)
-}
-
-fun ViewStatesSwitcher.empty() {
-    this.setStatus(ViewStatesSwitcher.Status.EMPTY)
-}
-
-fun ViewStatesSwitcher.idle() {
-    this.setStatus(ViewStatesSwitcher.Status.IDLE)
-}
-
-fun ViewStatesSwitcher.loading() {
-    this.setStatus(ViewStatesSwitcher.Status.LOADING)
 }
