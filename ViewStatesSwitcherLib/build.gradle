@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 15
-        versionName "0.1.15 ViewStatesSwitcher"
+        versionCode 16
+        versionName "0.1.16 ViewStatesSwitcher"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -29,7 +29,7 @@ publish {
     repoName = 'SergioCrespoToubes'
     groupId = 'com.sergiocrespotoubes.viewstatesswitcherlib'
     artifactId = 'ViewStatesSwitcher'
-    publishVersion = '0.1.15'
+    publishVersion = '0.1.16'
     desc = 'Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ERROR. Perfect for a simple recycler view control views.'
     website = 'https://github.com/Sergioct/ViewStatesSwitcher'
 }
