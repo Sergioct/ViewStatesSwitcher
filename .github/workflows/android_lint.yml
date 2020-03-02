@@ -13,4 +13,4 @@ jobs:
       uses: msfjarvis/setup-android@0.2
       with:
         entrypoint: ./gradlew
-        args: ktlintFormat ktlintCheck detekt lint
+        args: ktlintFormat ktlintCheck lint
