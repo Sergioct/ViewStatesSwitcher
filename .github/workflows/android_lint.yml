@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup-android-lint
+      uses: msfjarvis/setup-android@0.2
+      with:
+        entrypoint: ./gradlew
+        args: ktlintFormat ktlintCheck detekt lint
