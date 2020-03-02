@@ -35,26 +35,26 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta04'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha01'
 
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.50"
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.1"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.1"
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.61"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.3'
 
     // Groupie https://github.com/lisawray/groupie
     implementation "com.xwray:groupie:2.6.0"
     implementation "com.xwray:groupie-kotlin-android-extensions:2.6.0"
 
     // Coil https://github.com/coil-kt/coil
-    implementation "io.coil-kt:coil:0.7.0"
+    implementation "io.coil-kt:coil:0.9.5"
 
     // Gson https://github.com/google/gson
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
 
     // RxBinding https://github.com/JakeWharton/RxBinding
-    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.1.0'
 
     implementation project(':ViewStatesSwitcherLib')
 

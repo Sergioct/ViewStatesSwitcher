@@ -5,10 +5,10 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.Main
 
-class MainPresenter(val mView: MainContract.View) {
+class MainPresenter(private val view: MainContract.View) {
 
     fun loadData() = MainScope().launch {
-        mView.showLoading()
+        view.showLoading()
         delay(2000)
 
         val json = mockUsers()
@@ -19,13 +19,13 @@ class MainPresenter(val mView: MainContract.View) {
     }
 
     fun loadError() = MainScope().launch {
-        mView.showLoading()
+        view.showLoading()
         delay(2000)
         handleError()
     }
 
     fun loadEmpty() = MainScope().launch {
-        mView.showLoading()
+        view.showLoading()
         delay(2000)
         handleSuccess(listOf())
     }
@@ -34,16 +34,16 @@ class MainPresenter(val mView: MainContract.View) {
     private fun handleError(){
         GlobalScope.launch{
             withContext(Main){
-                mView.showError()
+                view.showError()
             }
         }
     }
 
     private fun handleSuccess(users: List<User>) = MainScope().launch {
         if(users.isNotEmpty()){
-            mView.showData(users)
+            view.showData(users)
         }else{
-            mView.showEmpty()
+            view.showEmpty()
         }
     }
 

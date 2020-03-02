@@ -1,5 +1,6 @@
 package com.sergiocrespotoubes.viewstatesswitcher
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(), MainContract.View {
 
     private val groupAdapter = GroupAdapter<GroupieViewHolder>()
-    val presenter = MainPresenter(this)
+    private val presenter = MainPresenter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         loadViews()
     }
 
+    @SuppressLint("CheckResult")
     private fun loadViews() {
 
         dataRecyclerView.apply {

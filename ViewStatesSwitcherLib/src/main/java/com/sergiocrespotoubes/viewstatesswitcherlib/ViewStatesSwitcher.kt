@@ -148,5 +148,4 @@ class ViewStatesSwitcher(context: Context, attrs: AttributeSet) : LinearLayout(c
             }
         }
     }
-
 }
