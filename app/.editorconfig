@@ -1,0 +1,11 @@
+[*.{kt, kts}]
+# possible values: number (e.g. 2), "unset" (makes ktlint ignore indentation completely)
+indent_style = tab
+charset = utf-8
+indent_size = tab
+end_of_line = crlf
+
+# true (recommended) / false
+insert_final_newline = true
+
+disabled_rules = import-ordering
