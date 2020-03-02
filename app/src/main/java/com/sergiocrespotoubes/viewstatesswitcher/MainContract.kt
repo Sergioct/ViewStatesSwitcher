@@ -7,11 +7,10 @@ package com.sergiocrespotoubes.viewstatesswitcher
  */
 interface MainContract {
 
-    interface View{
+    interface View {
         fun showError()
         fun showLoading()
         fun showEmpty()
-        fun showData(user: List<User>)
+        fun showData(users: List<User>)
     }
-
 }

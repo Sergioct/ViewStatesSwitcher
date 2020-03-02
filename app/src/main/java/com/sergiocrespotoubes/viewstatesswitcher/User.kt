@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
  *     SergioCrespoToubes@gmail.com
  *     www.SergioCrespoToubes.com
  */
-class User (
+class User(
     @SerializedName("first_name")
     val firstName: String,
     @SerializedName("last_name")

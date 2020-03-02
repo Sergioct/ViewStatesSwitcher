@@ -2,8 +2,12 @@ package com.sergiocrespotoubes.viewstatesswitcher
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainPresenter(private val view: MainContract.View) {
 
@@ -30,23 +34,21 @@ class MainPresenter(private val view: MainContract.View) {
         handleSuccess(listOf())
     }
 
-
-    private fun handleError(){
-        GlobalScope.launch{
-            withContext(Main){
+    private fun handleError() {
+        GlobalScope.launch {
+            withContext(Main) {
                 view.showError()
             }
         }
     }
 
     private fun handleSuccess(users: List<User>) = MainScope().launch {
-        if(users.isNotEmpty()){
+        if (users.isNotEmpty()) {
             view.showData(users)
-        }else{
+        } else {
             view.showEmpty()
         }
     }
-
 }
 
 fun mockUsers() = """[{

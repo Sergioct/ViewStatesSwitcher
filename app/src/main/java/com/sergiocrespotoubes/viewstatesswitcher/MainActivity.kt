@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jakewharton.rxbinding3.view.clicks
-import com.sergiocrespotoubes.viewstatesswitcherlib.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
         dataRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter  = groupAdapter
+            adapter = groupAdapter
         }
 
         presenter.loadData()
@@ -50,11 +49,10 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
     override fun showData(users: List<User>) {
         groupAdapter.clear()
-        val userItems = users.map{ user ->
+        val userItems = users.map { user ->
             UserItem(user)
         }
         groupAdapter.addAll(userItems)
         viewStatesSwitcher.success()
     }
-
 }
