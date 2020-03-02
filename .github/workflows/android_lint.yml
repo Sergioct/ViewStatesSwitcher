@@ -1,4 +1,4 @@
-name: CI
+name: android-lint
 
 on: [push]
 
