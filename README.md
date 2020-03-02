@@ -1,5 +1,6 @@
 # View States Switcher
 
+![CI](https://github.com/Sergioct/ViewStatesSwitcher/workflows/CI/badge.svg)
 [![Download](https://api.bintray.com/packages/sergioct/SergioCrespoToubes/ViewStatesSwitcher/images/download.svg) ](https://bintray.com/sergioct/SergioCrespoToubes/ViewStatesSwitcher/_latestVersion)
 [![MinSdk](https://img.shields.io/badge/%20MinSdk%20-%2019%2B%20-f0ad4e.svg)](https://android-arsenal.com/api?level=19)
 
