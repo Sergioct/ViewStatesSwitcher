@@ -18,7 +18,7 @@ Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ER
 
 ```groovy
 dependencies {
-    implementation 'com.sergiocrespotoubes.viewstatesswitcherlib:ViewStatesSwitcher:0.1.15'
+    implementation 'com.sergiocrespotoubes.viewstatesswitcherlib:ViewStatesSwitcher:$version'
 }
 ```
 
