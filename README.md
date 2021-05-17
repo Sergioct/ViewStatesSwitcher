@@ -13,6 +13,8 @@ Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ER
 
 ## Setup
 
+#### ** Deprecated **
+
 #### Add the dependency
 >
 
