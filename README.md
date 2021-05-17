@@ -1,4 +1,4 @@
-# View States Switcher
+# View States Switcher ** Deprecated **
 
 ![CI](https://github.com/Sergioct/ViewStatesSwitcher/workflows/CI/badge.svg)
 [![Download](https://api.bintray.com/packages/sergioct/SergioCrespoToubes/ViewStatesSwitcher/images/download.svg) ](https://bintray.com/sergioct/SergioCrespoToubes/ViewStatesSwitcher/_latestVersion)
@@ -12,8 +12,6 @@ Library that control the different states of a view, SUCCESS, LOADING, EMPTY, ER
 ![Alt Text](https://i.imgur.com/osgI6yI.gif)
 
 ## Setup
-
-#### ** Deprecated **
 
 #### Add the dependency
 >
